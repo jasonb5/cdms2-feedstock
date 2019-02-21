@@ -20,11 +20,12 @@ requirements:
   host:
     - python {{ python }}
     - setuptools
-    - cdat_info
+    - cdat_info >=8.1.1
     - numpy
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
+    - cdtime >=3.1.2
   run:
     - python {{ python }}
     - libcf
