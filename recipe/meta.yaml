@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 72104341bf792252837bf643ea1c15bf8da31962a5c87b019ec2e85c6724f6b7
+  sha256: ecd22371fb8fb24e04c9ffafc91e3b890310d3aae8ee852371d6441a3c96e9bf
 
 build:
   number: 1
