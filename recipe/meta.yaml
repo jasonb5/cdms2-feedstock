@@ -10,7 +10,7 @@ source:
   sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win] 
 
 requirements:
@@ -29,7 +29,7 @@ requirements:
     - cdtime >=3.1.2
     - openblas
     - lazy-object-proxy
-    - libnetcdf >=4.6.2,<4.6.3.0a0
+    - libnetcdf
   run:
     - python {{ python }}
     - libcf
@@ -46,7 +46,7 @@ requirements:
     - libdrs >=3.1.2
     - cdtime >=3.1.2
     - openblas
-    - libnetcdf >=4.6.2,<4.6.3.0a0
+    - libnetcdf
 
 test:
   commands:
