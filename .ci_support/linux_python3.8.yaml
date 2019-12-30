@@ -17,14 +17,12 @@ fortran_compiler:
 fortran_compiler_version:
 - '7'
 libnetcdf:
-- 4.7.1
+- 4.7.3
 numpy:
 - '1.14'
 openblas:
 - 0.3.6
 pin_run_as_build:
-  libnetcdf:
-    max_pin: x.x.x
   openblas:
     max_pin: x.x.x
   python:
