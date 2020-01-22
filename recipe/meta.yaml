@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
   sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
+  patches:
+    - 0001-Fixes-issue-creating-file-on-OSX-when-compiled-with-clang-and--fstack-protector-string.patch
 
 build:
   number: 6
@@ -56,17 +58,17 @@ test:
     - export CDAT_ANONYMOUS_LOG=false && python -c "from cdms2 import MV2"
 
 about:
-  home: http://github.com/CDAT/cdms2
-  license: '3-Clause BSD'
-  license_file: 'bsd-3-clause.txt'
-  summary: 'Community Data Management System'
+  home: http://github.com/CDAT/cdms
+  license: BSD-3-Clause
+  license_file: bsd-3-clause.txt
+  summary: Community Data Management System
   description: |
     The Community Data Management System is an object-oriented
     data management system, specialized for organizing
     multidimensional, gridded data used in climate
     analysis and simulation.
   doc_url: https://cdms.readthedocs.io/en/latest
-  dev_url: http://github.com/CDAT/cdms2
+  dev_url: http://github.com/CDAT/cdms
 
 extra:
   recipe-maintainers:
