@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
   sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
+  patches:
+    - 0001-Fixes-issue-creating-file-on-OSX-when-compiled-with-clang-and--fstack-protector-string.patch
 
 build:
   number: 6
