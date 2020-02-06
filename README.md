@@ -1,9 +1,9 @@
 About cdms2
 ===========
 
-Home: http://github.com/CDAT/cdms2
+Home: http://github.com/CDAT/cdms
 
-Package license: 3-Clause BSD
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
