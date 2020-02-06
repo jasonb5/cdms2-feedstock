@@ -10,8 +10,7 @@ source:
   sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
   patches:
     - 0001-Fixes-issue-creating-file-on-OSX-when-compiled-with-clang-and--fstack-protector-string.patch
-    - 0001-replaced-numpy.ma.rank-with-numpy.rank.patch
-    - 0001-replaced-numpy.rank-with-numpy.ndim-adding-test_setd.patch
+    - 0002-replaced-numpy.rank-with-numpy.ndim-adding-test_setd.patch
 
 build:
   number: 8
