@@ -13,7 +13,7 @@ source:
     - 0002-replaced-numpy.rank-with-numpy.ndim-adding-test_setd.patch
 
 build:
-  number: 9
+  number: 10
   skip: True  # [win] 
 
 requirements:
@@ -33,6 +33,7 @@ requirements:
     - openblas
     - lazy-object-proxy
     - libnetcdf
+    - libnetcdf * nompi_*
   run:
     - python {{ python }}
     - libcf
