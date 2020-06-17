@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.4" %}
+{% set version = "3.1.5.rc1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,10 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
-  patches:
-    - 0001-Fixes-issue-creating-file-on-OSX-when-compiled-with-clang-and--fstack-protector-string.patch
-    - 0002-replaced-numpy.rank-with-numpy.ndim-adding-test_setd.patch
+  sha256: 6e657614be9140cebcd73b230fb4cc43a8c82fc043cc2f6ebda9ce9284119c22
 
 build:
-  number: 10
+  number: 0
   skip: True  # [win] 
 
 requirements:
@@ -24,12 +21,12 @@ requirements:
   host:
     - python {{ python }}
     - setuptools
-    - cdat_info >=8.2
+    - cdat_info >=8.2.1
     - numpy
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
-    - cdtime >=3.1.2
+    - cdtime >=3.1.4
     - openblas
     - lazy-object-proxy
     - libnetcdf
@@ -40,7 +37,7 @@ requirements:
     - distarray
     - lazy-object-proxy
     - cdtime
-    - cdat_info >=8.2
+    - cdat_info >=8.2.1
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
@@ -48,7 +45,7 @@ requirements:
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
     - libdrs >=3.1.2
-    - cdtime >=3.1.2
+    - cdtime >=3.1.4
     - openblas
     - libnetcdf
 
