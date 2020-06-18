@@ -1,4 +1,4 @@
-{% set name = "cdms2" %}
+`{% set name = "cdms2" %}
 {% set version = "3.1.5.rc1" %}
 
 package:
@@ -21,7 +21,7 @@ requirements:
   host:
     - python {{ python }}
     - setuptools
-    - cdat_info >=8.2.1
+    - cdat_info >=8.2
     - numpy
     - libcdms >=3.1.2
     - libdrs_f >=3.1.2
@@ -37,7 +37,7 @@ requirements:
     - distarray
     - lazy-object-proxy
     - cdtime
-    - cdat_info >=8.2.1
+    - cdat_info >=8.2
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
