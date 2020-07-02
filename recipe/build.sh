@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 if [ $(uname) == "Linux" ];then
     export LDSHARED="$CC -shared -pthread"
