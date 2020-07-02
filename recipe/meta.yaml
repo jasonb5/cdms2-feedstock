@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.5.rc1" %}
+{% set version = "3.1.5.rc2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 6e657614be9140cebcd73b230fb4cc43a8c82fc043cc2f6ebda9ce9284119c22
+  sha256: 46afc0872deb7fd55bd8e079412965172fdfcaa73a6cb537e1a7638d147d4ef7
 
 build:
   number: 0
@@ -19,13 +19,13 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
   host:
-    - python {{ python }}
+    - python
     - setuptools
     - cdat_info
     - numpy
-    - libcdms >=3.1.2
-    - libdrs_f >=3.1.2
-    - libdrs >=3.1.2
+    - libcdms
+    - libdrs_f
+    - libdrs
     - cdtime
     - openblas
     - lazy-object-proxy
@@ -42,19 +42,19 @@ requirements:
     - esmf
     - esmpy
     - six
-    - libcdms >=3.1.2
-    - libdrs_f >=3.1.2
-    - libdrs >=3.1.2
+    - libcdms
+    - libdrs_f
+    - libdrs
     - cdtime
     - openblas
     - libnetcdf
 
 test:
   commands:
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2; cdms2.open('test.nc', 'w')"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2; cdms2.open('test.nc')"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "from cdms2 import MV2"
+    - python -c 'import cdms2'
+    - python -c 'import cdms2; cdms2.open("test.nc", "w")'
+    - python -c 'import cdms2; cdms2.open("test.nc")'
+    - python -c 'import cdms2.MV2'
 
 about:
   home: http://github.com/CDAT/cdms
