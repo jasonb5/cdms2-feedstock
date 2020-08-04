@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.4" %}
+{% set version = "3.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,10 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: 106456b6e3c0fb05f65d23c2d259a9d995d54091f75393d2c845f0462ed8dc02
-  patches:
-    - 0001-Fixes-issue-creating-file-on-OSX-when-compiled-with-clang-and--fstack-protector-string.patch
-    - 0002-replaced-numpy.rank-with-numpy.ndim-adding-test_setd.patch
+  sha256: 2b4f2ad348581c9831d3dcb785502515da41f0d21be728c8211618871a0caed9
 
 build:
-  number: 10
+  number: 0
   skip: True  # [win] 
 
 requirements:
@@ -22,14 +19,14 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ compiler('fortran') }}
   host:
-    - python {{ python }}
+    - python
     - setuptools
-    - cdat_info >=8.2
+    - cdat_info
     - numpy
-    - libcdms >=3.1.2
-    - libdrs_f >=3.1.2
-    - libdrs >=3.1.2
-    - cdtime >=3.1.2
+    - libcdms
+    - libdrs_f
+    - libdrs
+    - cdtime
     - openblas
     - lazy-object-proxy
     - libnetcdf
@@ -40,24 +37,24 @@ requirements:
     - distarray
     - lazy-object-proxy
     - cdtime
-    - cdat_info >=8.2
+    - cdat_info
     - {{ pin_compatible('numpy') }}
     - esmf
     - esmpy
     - six
-    - libcdms >=3.1.2
-    - libdrs_f >=3.1.2
-    - libdrs >=3.1.2
-    - cdtime >=3.1.2
+    - libcdms
+    - libdrs_f
+    - libdrs
+    - cdtime
     - openblas
     - libnetcdf
 
 test:
   commands:
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2; cdms2.open('test.nc', 'w')"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "import cdms2; cdms2.open('test.nc')"
-    - export CDAT_ANONYMOUS_LOG=false && python -c "from cdms2 import MV2"
+    - python -c 'import cdms2'
+    - python -c 'import cdms2; cdms2.open("test.nc", "w")'
+    - python -c 'import cdms2; cdms2.open("test.nc")'
+    - python -c 'import cdms2.MV2'
 
 about:
   home: http://github.com/CDAT/cdms
