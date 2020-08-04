@@ -1,5 +1,5 @@
 {% set name = "cdms2" %}
-{% set version = "3.1.5.rc3" %}
+{% set version = "3.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
-  sha256: fb05b3500775d44e8a829bbce4b1553d9bed24227feae3a9c9f4d194053ddf80
+  sha256: 2b4f2ad348581c9831d3dcb785502515da41f0d21be728c8211618871a0caed9
 
 build:
   number: 0
