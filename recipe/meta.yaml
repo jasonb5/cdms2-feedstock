@@ -8,9 +8,11 @@ package:
 source:
   url: https://github.com/CDAT/cdms/archive/v{{ version }}.tar.gz
   sha256: 2b4f2ad348581c9831d3dcb785502515da41f0d21be728c8211618871a0caed9
+  patches:
+    - 0001-fix_version-fix_readthedocs_build_failures.patch
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win] 
 
 requirements:
