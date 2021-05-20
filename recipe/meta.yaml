@@ -10,9 +10,10 @@ source:
   sha256: 2b4f2ad348581c9831d3dcb785502515da41f0d21be728c8211618871a0caed9
   patches:
     - 0001-fix_version-fix_readthedocs_build_failures.patch
+    - 0002-fixes_building_extensions.patch
 
 build:
-  number: 3
+  number: 4
   skip: True  # [win] 
 
 requirements:
@@ -57,6 +58,10 @@ test:
     - python -c 'import cdms2; cdms2.open("test.nc", "w")'
     - python -c 'import cdms2; cdms2.open("test.nc")'
     - python -c 'import cdms2.MV2'
+    - python -c 'import cdms2._bindex'
+    - python -c 'import regrid2'
+    - python -c 'import regrid2._regrid'
+    - python -c 'import regrid2._scrip'
 
 about:
   home: http://github.com/CDAT/cdms
