@@ -11,9 +11,10 @@ source:
   patches:
     - 0001-fix_version-fix_readthedocs_build_failures.patch
     - 0002-fixes_building_extensions.patch
+    - 0003-Removes-modifying-ncmode-with-NC_NETCDF4-flag.patch
 
 build:
-  number: 4
+  number: 5
   skip: True  # [win] 
 
 requirements:
