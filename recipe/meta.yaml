@@ -18,7 +18,7 @@ source:
     - 0007-fix_disable_mpi4py_in_dataset.patch
 
 build:
-  number: 10
+  number: 11
   skip: True  # [win] 
 
 requirements:
@@ -39,6 +39,7 @@ requirements:
     - lazy-object-proxy
     - libnetcdf
     - libnetcdf * nompi_*
+    - jasper
   run:
     - python {{ python }}
     - libcf
@@ -56,6 +57,7 @@ requirements:
     - cdtime
     - openblas
     - libnetcdf
+    - jasper
 
 test:
   commands:
